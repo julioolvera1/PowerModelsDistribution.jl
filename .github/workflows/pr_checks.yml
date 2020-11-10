@@ -2,12 +2,6 @@ name: Pull Request Checks
 on: pull_request
 
 jobs:
-  changelog-updated:
-    name: CHANGELOG updated
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - run: .github/scripts/file-changed-check "${{ github.head_ref }}" "${{ github.base_ref }}" "CHANGELOG\.md"
   unit-tests-updated:
     name: Unit tests updated
     runs-on: ubuntu-latest
